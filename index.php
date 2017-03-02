@@ -22,6 +22,9 @@
 		<?php
         include '_header.php';
 		?>
+            <div class="img-slider">
+                <img src="img/banner.jpg" alt="">
+            </div>
 		</div>
 		
 		<div id="content">

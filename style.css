@@ -10,8 +10,8 @@ body {
 	position:relative;
 }
 #header {
-	background:#ededed;
-	padding:10px;
+	/*background:#ededed;*/
+	/*padding:10px;*/
 }
 #content {
 	padding-bottom:100px; /* Height of the footer element */
@@ -27,7 +27,7 @@ body {
 
 
 
-/*menu*/
+/*menu start*/
 
 .sidenav {
 	height: 100%;
@@ -36,7 +36,7 @@ body {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #111;
+	background-color: black;
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 60px;
@@ -66,6 +66,7 @@ body {
 #main {
 	transition: margin-left .5s;
 	padding: 16px;
+	position: absolute;
 }
 
 @media screen and (max-height: 450px) {
@@ -73,4 +74,23 @@ body {
 	.sidenav a {font-size: 18px;}
 }
 
-/*menu*/
+/*menu end*/
+
+.top-info{
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+.img-slider{
+	background-color: #2aabd2;
+	height: 400px;
+	width: 100%;
+}
+
+.img-slider img{
+	height: 100%;
+	width: 100%;
+	/*position: relative;*/
+	/*overflow: hidden;*/
+}

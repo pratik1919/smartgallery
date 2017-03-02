@@ -15,6 +15,7 @@
     <title>Smart Gallery</title>
 
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
 
     <!--[if lt IE 7]>
     <style type="text/css">
@@ -26,6 +27,10 @@
 
 <body>
 
+<div class="row top-info">
+    <h6><i class="glyphicon glyphicon-phone"></i> Call : 985-1243865</h6>
+</div>
+
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#">About</a>
@@ -35,9 +40,8 @@
 </div>
 
 <div id="main">
-    <h2>Sidenav Push Example</h2>
-    <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <span><img src="img/logo.jpg" height="70px" alt=""></span>
 </div>
 
 

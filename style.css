@@ -67,6 +67,7 @@ body {
 	transition: margin-left .5s;
 	padding: 16px;
 	position: absolute;
+	z-index: 10;
 }
 
 @media screen and (max-height: 450px) {
@@ -79,7 +80,17 @@ body {
 .top-info{
 	background-color: black;
 	color: white;
-	text-align: center;
+	text-align: start;
+	padding-left: 180px;
+	padding-right: 180px;
+}
+
+.top-info a{
+	color: white;
+}
+
+.top-info h6{
+	display: inline-block;
 }
 
 .img-slider{

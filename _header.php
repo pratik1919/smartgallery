@@ -7,15 +7,17 @@
  */
 ?>
 
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Smart Gallery</title>
 
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+    <link href="bootstrap-3.3.7-dist/css/font-awesome.css" rel="stylesheet">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap-social.css" rel="stylesheet">
+
 
     <!--[if lt IE 7]>
     <style type="text/css">
@@ -27,8 +29,24 @@
 
 <body>
 
-<div class="row top-info">
-    <h6><i class="glyphicon glyphicon-phone"></i> Call : 985-1243865</h6>
+<div class="top-info">
+    <h6 style="padding: 9px;"><i class="glyphicon glyphicon-phone"></i> Call : 985-1243865</h6>
+    <h6 style="float: right;">
+        <a class="btn">
+            <span class="fa fa-facebook"></span>
+        </a>
+
+        <a class="btn">
+            <span class="fa fa-twitter"></span>
+        </a>
+
+        <a class="btn">
+            <span class="fa fa-instagram"></span>
+        </a>
+        <a class="btn">
+            <span class="fa fa-youtube"></span>
+        </a>
+    </h6>
 </div>
 
 <div id="mySidenav" class="sidenav">
@@ -41,7 +59,7 @@
 
 <div id="main">
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-    <span><img src="img/logo.jpg" height="70px" alt=""></span>
+    <span><img src="img/logo.png" height="70px" alt=""></span>
 </div>
 
 

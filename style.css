@@ -4,6 +4,7 @@ body {
 	margin:0;
 	padding:0;
 	height:100%;
+	font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
 }
 #wrapper {
 	min-height:100%;
@@ -172,4 +173,38 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
+}
+
+.product-section{
+	width: 100%;
+	padding: 15px;
+	display: block;
+}
+
+.best-seller div{
+	display: table;
+	height: 400px;
+	padding: 15px;
+}
+
+.best-seller{
+	background-color: snow;
+	margin-top: 15px;
+}
+
+.best-seller div .title{
+	font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+	font-style: normal;
+	color: #404752;
+	font-weight: 700;
+	text-transform: none;
+	font-size: 45px;
+	line-height: 66px;
+	display: table-cell;
+	vertical-align: middle;;
+}
+
+.best-seller img{
+	height: 100%;
+	position: relative;
 }

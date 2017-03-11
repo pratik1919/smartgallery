@@ -313,10 +313,33 @@
                 </div>
             </div>
 
+        </div>
 
-            <div style="width: 100%;">
+        <div class="product-section">
+            <legend class="title">Best Sellers</legend>
 
+            <div class="row best-seller">
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <h1 class="title">Product name <br> <span style="font-size: 24px;">Rs 5000/- </span><br>
+                        <button class="btn btn-success">Buy Now</button> </h1>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <img src="img/cook.jpg" alt="">
+                </div>
             </div>
+
+            <div class="row best-seller">
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <h1 class="title">Product name <br> <span style="font-size: 24px;">Rs 5000/- </span><br>
+                        <button class="btn btn-success">Buy Now</button> </h1>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <img src="img/hair.jpg" alt="">
+                </div>
+            </div>
+        </div>
         </div><!-- #content -->
 
         <div id="footer">

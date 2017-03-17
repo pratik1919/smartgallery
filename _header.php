@@ -12,13 +12,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Smart Gallery</title>
-
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
     <link href="bootstrap-3.3.7-dist/css/font-awesome.css" rel="stylesheet">
     <link href="bootstrap-3.3.7-dist/css/bootstrap-social.css" rel="stylesheet">
-
-
+    <script src="bootstrap-3.3.7-dist/js/jquery-1.11.3.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/script.js"></script>
     <!--[if lt IE 7]>
     <style type="text/css">
         #wrapper { height:100%; }
@@ -51,17 +50,43 @@
 
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <?php
+    if(isset($_SESSION['login'])){
+        ?>
+        <a href="controller/c_logout.php">Logout</a>
+        <a href="controller/c_logout.php">Change Password</a>
+        <?php
+    }
+    ?>
     <a href="#">About</a>
     <a href="#">Services</a>
     <a href="#">Clients</a>
     <a href="#">Contact</a>
 </div>
-
 <div id="main">
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
     <span><img src="img/logo.png" height="70px" alt=""></span>
 </div>
 
+<div class="social-media">
+<div>
+    <a class="btn btn-facebook">
+        <span class="fa fa-facebook"></span>
+    </a>
+
+    <a class="btn btn-twitter">
+        <span class="fa fa-twitter"></span>
+    </a>
+
+    <a class="btn btn-instagram">
+        <span class="fa fa-instagram"></span>
+    </a>
+
+    <a class="btn btn-google">
+        <span class="fa fa-youtube"></span>
+    </a>
+</div>
+</div>
 
 
 <script>
@@ -76,6 +101,8 @@
         document.getElementById("main").style.marginLeft= "0";
         document.body.style.backgroundColor = "white";
     }
+
+    $(document).ready(function(){$("#main").fixedScrollPosition("50px")})
 </script>
 
 </body>

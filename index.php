@@ -1,14 +1,15 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Smart Gallery</title>
-
-
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+<!--    <link rel="stylesheet" type="text/css" href="style.css"/>-->
     <script src="bootstrap-3.3.7-dist/js/jssor.slider-22.2.11.min.js" type="text/javascript"></script>
-
-
     <script type="text/javascript">
         jssor_1_slider_init = function () {
 
@@ -75,13 +76,13 @@
         }
 
         /* jssor slider bullet navigator skin 05 css */
-        /*
-        .jssorb05 div           (normal)
-        .jssorb05 div:hover     (normal mouseover)
-        .jssorb05 .av           (active)
-        .jssorb05 .av:hover     (active mouseover)
-        .jssorb05 .dn           (mousedown)
-        */
+
+        .jssorb05 div           (normal);
+        .jssorb05 div:hover     (normal mouseover);
+        .jssorb05 .av           (active);
+        .jssorb05 .av:hover     (active mouseover);
+        .jssorb05 .dn           (mousedown);
+
         .jssorb05 {
             position: absolute;
         }
@@ -113,16 +114,7 @@
         }
 
         /* jssor slider arrow navigator skin 22 css */
-        /*
-        .jssora22l                  (normal)
-        .jssora22r                  (normal)
-        .jssora22l:hover            (normal mouseover)
-        .jssora22r:hover            (normal mouseover)
-        .jssora22l.jssora22ldn      (mousedown)
-        .jssora22r.jssora22rdn      (mousedown)
-        .jssora22l.jssora22lds      (disabled)
-        .jssora22r.jssora22rds      (disabled)
-        */
+
         .jssora22l, .jssora22r {
             display: block;
             position: absolute;
@@ -203,10 +195,10 @@
                             Hahahah
                         </div>
                     </div>
-                    <!--                        <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">-->
-                    <!--                            <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>-->
-                    <!--                            <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>-->
-                    <!--                        </div>-->
+<!--                                            <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">-->
+<!--                                                <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>-->
+<!--                                                <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>-->
+<!--                                            </div>-->
                 </div>
                 <div>
                     <img data-u="image" src="img/windows.jpg"/>
@@ -218,10 +210,10 @@
                             haha
                         </div>
                     </div>
-                    <!--                        <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">-->
-                    <!--                            <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>-->
-                    <!--                            <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>-->
-                    <!--                        </div>-->
+<!--                                            <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">-->
+<!--                                                <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>-->
+<!--                                                <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>-->
+<!--                                            </div>-->
                 </div>
                 <div>
                     <img data-u="image" src="img/mac.jpg"/>
@@ -251,24 +243,43 @@
                   data-autocenter="2"></span>
         </div>
     </div>
-
+    <div class="col-md-4 col-sm-4 col-lg-4 featured">
+        <img src="img/dicer.jpg" alt="">
+    </div>
+    <div class="col-md-4 col-sm-4 col-lg-4 featured">
+        <img src="img/dicer.jpg" alt="">
+    </div>
+    <div class="col-md-4 col-sm-4 col-lg-4 featured">
+        <img src="img/dicer.jpg" alt="">
+    </div>
     <div id="content">
 
         <div class="container">
             <div class="row">
                 <legend class="title">Latest Products</legend>
-                <div class="col-md-6 col-sm-6 col-lg-6 pad">
-                    <div class="product">
-                        <img src="img/cook.jpg" alt="">
-                        <div class="pad">
-                            <div class="overlay">
-                                <span class="imgText">This is latest</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 pad">
-                    <div class="product">
+<!--                <div class="col-md-6 col-sm-6 col-lg-6 pad">-->
+<!--                    <div class="product">-->
+<!--                        <img src="img/cook.jpg" alt="">-->
+<!--                        <div class="pad">-->
+<!--                            <div class="overlay">-->
+<!--                                <span class="imgText">This is latest</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-6 col-sm-6 col-lg-6 pad">-->
+<!--                    <div class="product">-->
+<!--                        <img src="img/dicer.jpg" alt="">-->
+<!--                        <div class="pad">-->
+<!--                            <div class="overlay">-->
+<!--                                <span class="imgText">This is latest</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+                <div class="col-md-4 col-sm-4 col-lg-4 pad">
+                    <div class="product" style="height: 300px;">
                         <img src="img/dicer.jpg" alt="">
                         <div class="pad">
                             <div class="overlay">
@@ -279,7 +290,7 @@
                 </div>
 
                 <div class="col-md-4 col-sm-4 col-lg-4 pad">
-                    <div class="product" style="height: 200px;">
+                    <div class="product" style="height: 300px;">
                         <img src="img/dicer.jpg" alt="">
                         <div class="pad">
                             <div class="overlay">
@@ -290,18 +301,7 @@
                 </div>
 
                 <div class="col-md-4 col-sm-4 col-lg-4 pad">
-                    <div class="product" style="height: 200px;">
-                        <img src="img/dicer.jpg" alt="">
-                        <div class="pad">
-                            <div class="overlay">
-                                <span class="imgText">This is latest</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-4 col-lg-4 pad">
-                    <div class="product" style="height: 200px;">
+                    <div class="product" style="height: 300px;">
                         <img src="img/dicer.jpg" alt="">
                         <div class="pad">
                         <div class="overlay">
@@ -339,10 +339,44 @@
                     <img src="img/hair.jpg" alt="">
                 </div>
             </div>
+            <div class="row best-seller">
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <h1 class="title">Product name <br> <span style="font-size: 24px;">Rs 5000/- </span><br>
+                        <button class="btn btn-success">Buy Now</button> </h1>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <img src="img/cook.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="row best-seller">
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <h1 class="title">Product name <br> <span style="font-size: 24px;">Rs 5000/- </span><br>
+                        <button class="btn btn-success">Buy Now</button> </h1>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <img src="img/hair.jpg" alt="">
+                </div>
+            </div>
+            <div class="row best-seller">
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <h1 class="title">Product name <br> <span style="font-size: 24px;">Rs 5000/- </span><br>
+                        <button class="btn btn-success">Buy Now</button> </h1>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <img src="img/hair.jpg" alt="">
+                </div>
+            </div>
         </div>
         </div><!-- #content -->
 
         <div id="footer">
+            <?php
+            include '_footer.php';
+            ?>
         </div><!-- #footer -->
 
     </div><!-- #wrapper -->

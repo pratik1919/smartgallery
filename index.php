@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Smart Gallery</title>
-<!--    <link rel="stylesheet" type="text/css" href="style.css"/>-->
+    <!--    <link rel="stylesheet" type="text/css" href="style.css"/>-->
     <script src="bootstrap-3.3.7-dist/js/jssor.slider-22.2.11.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         jssor_1_slider_init = function () {
@@ -77,11 +77,33 @@ session_start();
 
         /* jssor slider bullet navigator skin 05 css */
 
-        .jssorb05 div           (normal);
-        .jssorb05 div:hover     (normal mouseover);
-        .jssorb05 .av           (active);
-        .jssorb05 .av:hover     (active mouseover);
-        .jssorb05 .dn           (mousedown);
+        .jssorb05 div
+
+        (
+        normal
+
+        )
+        ;
+        .jssorb05 div:hover     (normal mouseover)
+
+        ;
+        .jssorb05 .av
+
+        (
+        active
+
+        )
+        ;
+        .jssorb05 .av:hover     (active mouseover)
+
+        ;
+        .jssorb05 .dn
+
+        (
+        mousedown
+
+        )
+        ;
 
         .jssorb05 {
             position: absolute;
@@ -195,10 +217,10 @@ session_start();
                             Hahahah
                         </div>
                     </div>
-<!--                                            <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">-->
-<!--                                                <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>-->
-<!--                                                <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>-->
-<!--                                            </div>-->
+                    <!--                                            <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">-->
+                    <!--                                                <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>-->
+                    <!--                                                <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>-->
+                    <!--                                            </div>-->
                 </div>
                 <div>
                     <img data-u="image" src="img/windows.jpg"/>
@@ -210,10 +232,10 @@ session_start();
                             haha
                         </div>
                     </div>
-<!--                                            <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">-->
-<!--                                                <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>-->
-<!--                                                <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>-->
-<!--                                            </div>-->
+                    <!--                                            <div style="position:absolute;top:370px;left:100px;width:600px;height:120px;z-index:0;background-color:rgba(255,255,255,0.5);">-->
+                    <!--                                                <div style="position:absolute;top:15px;left:15px;width:500px;height:40px;z-index:0;font-size:30px;color:#000000;line-height:40px;">Run slider on any device</div>-->
+                    <!--                                                <div style="position:absolute;top:60px;left:15px;width:500px;height:40px;z-index:0;font-size:22px;color:#000000;line-height:38px;">windows, android, mac</div>-->
+                    <!--                                            </div>-->
                 </div>
                 <div>
                     <img data-u="image" src="img/mac.jpg"/>
@@ -244,143 +266,339 @@ session_start();
         </div>
     </div>
     <div class="col-md-4 col-sm-4 col-lg-4 featured">
-        <img src="img/dicer.jpg" alt="">
+        <?php
+        $prod = getProduct("featured-1", $conn);
+        $row = $prod->fetch_assoc();
+
+        if (isset($_SESSION['login'])) {
+            ?>
+            <div class="changeBtnDiv">
+                <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="featured-1"
+                        data-toggle="modal" data-target="#addProductModal">
+                </button>
+            </div>
+            <?php
+        }
+        ?>
+        <img src="img/<?php echo $row['photo']; ?>" alt="">
     </div>
     <div class="col-md-4 col-sm-4 col-lg-4 featured">
-        <img src="img/dicer.jpg" alt="">
+        <?php
+        $prod = getProduct("featured-2", $conn);
+        $row = $prod->fetch_assoc();
+
+        if (isset($_SESSION['login'])) {
+            ?>
+            <div class="changeBtnDiv">
+                <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="featured-2"
+                        data-toggle="modal" data-target="#addProductModal">
+                </button>
+            </div>
+            <?php
+        }
+        ?>
+        <img src="img/<?php echo $row['photo']; ?>" alt="">
     </div>
     <div class="col-md-4 col-sm-4 col-lg-4 featured">
-        <img src="img/dicer.jpg" alt="">
+        <?php
+        $prod = getProduct("featured-3", $conn);
+        $row = $prod->fetch_assoc();
+
+        if (isset($_SESSION['login'])) {
+            ?>
+            <div class="changeBtnDiv">
+                <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="featured-3"
+                        data-toggle="modal" data-target="#addProductModal">
+                </button>
+            </div>
+            <?php
+        }
+        ?>
+        <img src="img/<?php echo $row['photo']; ?>" alt="">
     </div>
     <div id="content">
 
         <div class="container">
             <div class="row">
                 <legend class="title">Latest Products</legend>
-<!--                <div class="col-md-6 col-sm-6 col-lg-6 pad">-->
-<!--                    <div class="product">-->
-<!--                        <img src="img/cook.jpg" alt="">-->
-<!--                        <div class="pad">-->
-<!--                            <div class="overlay">-->
-<!--                                <span class="imgText">This is latest</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-md-6 col-sm-6 col-lg-6 pad">-->
-<!--                    <div class="product">-->
-<!--                        <img src="img/dicer.jpg" alt="">-->
-<!--                        <div class="pad">-->
-<!--                            <div class="overlay">-->
-<!--                                <span class="imgText">This is latest</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
 
                 <div class="col-md-4 col-sm-4 col-lg-4 pad">
-                    <div class="product" style="height: 300px;">
-                        <img src="img/dicer.jpg" alt="">
-                        <div class="pad">
-                            <div class="overlay">
-                                <span class="imgText">This is latest</span>
+                    <div class="product"
+                         style="height: 300px; background-image: url('img/<?php echo $row['photo']; ?>')">
+                        <?php
+
+                        $prod = getProduct("LP-1", $conn);
+                        $row = $prod->fetch_assoc();
+
+                        if (isset($_SESSION['login'])) {
+                            ?>
+                            <div class="changeBtnDiv">
+                                <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="LP-1"
+                                        data-toggle="modal" data-target="#addProductModal">
+                                </button>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                            <?php
+                        }
+                        ?>
 
-                <div class="col-md-4 col-sm-4 col-lg-4 pad">
-                    <div class="product" style="height: 300px;">
-                        <img src="img/dicer.jpg" alt="">
-                        <div class="pad">
-                            <div class="overlay">
-                                <span class="imgText">This is latest</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-4 col-lg-4 pad">
-                    <div class="product" style="height: 300px;">
-                        <img src="img/dicer.jpg" alt="">
-                        <div class="pad">
                         <div class="overlay">
-                            <span class="imgText">This is latest</span>
-                        </div>
+                            <h5><?php echo $row['name']; ?><br> <span
+                                        style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
+                                <button class="btn btn-success">Buy Now</button>
+                            </h5>
                         </div>
 
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-lg-4 pad">
+                    <div class="product"
+                         style="height: 300px; background-image: url('img/<?php echo $row['photo']; ?>')">
+                        <?php
+
+                        $prod = getProduct("LP-2", $conn);
+                        $row = $prod->fetch_assoc();
+
+                        if (isset($_SESSION['login'])) {
+                            ?>
+                            <div class="changeBtnDiv">
+                                <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="LP-2"
+                                        data-toggle="modal" data-target="#addProductModal">
+                                </button>
+                            </div>
+                            <?php
+                        }
+                        ?>
+
+                        <div class="overlay">
+                            <h5><?php echo $row['name']; ?><br> <span
+                                        style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
+                                <button class="btn btn-success">Buy Now</button>
+                            </h5>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-lg-4 pad">
+                    <div class="product"
+                         style="height: 300px; background-image: url('img/<?php echo $row['photo']; ?>')">
+                        <?php
+
+                        $prod = getProduct("LP-3", $conn);
+                        $row = $prod->fetch_assoc();
+
+                        if (isset($_SESSION['login'])) {
+                            ?>
+                            <div class="changeBtnDiv">
+                                <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="LP-3"
+                                        data-toggle="modal" data-target="#addProductModal">
+                                </button>
+                            </div>
+                            <?php
+                        }
+                        ?>
+                        <div class="overlay">
+                            <h5><?php echo $row['name']; ?><br> <span
+                                        style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
+                                <button class="btn btn-success">Buy Now</button>
+                            </h5>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <div class="product-section">
             <legend class="title">Best Sellers</legend>
 
             <div class="row best-seller">
+                <?php
+                $prod = getProduct("BS-1", $conn);
+                $row = $prod->fetch_assoc();
+                if (isset($_SESSION['login'])) {
+                    ?>
+                    <div class="changeBtnDiv">
+                        <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="BS-1"
+                                data-toggle="modal" data-target="#addProductModal">
+                        </button>
+                    </div>
+                    <?php
+                }
+                ?>
                 <div class="col-md-6 col-sm-6 col-lg-6">
-                    <h1 class="title">Product name <br> <span style="font-size: 24px;">Rs 5000/- </span><br>
-                        <button class="btn btn-success">Buy Now</button> </h1>
+                    <h1 class="title"><?php echo $row['name']; ?><br> <span
+                                style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
+                        <button class="btn btn-success">Buy Now</button>
+                    </h1>
 
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6">
-                    <img src="img/cook.jpg" alt="">
+                    <img src="img/<?php echo $row['photo']; ?>" alt="">
                 </div>
             </div>
 
             <div class="row best-seller">
+                <?php
+                $prod = getProduct("BS-2", $conn);
+                $row = $prod->fetch_assoc();
+                if (isset($_SESSION['login'])) {
+                    ?>
+                    <div class="changeBtnDiv">
+                        <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="BS-2"
+                                data-toggle="modal" data-target="#addProductModal">
+                        </button>
+                    </div>
+                    <?php
+                }
+                ?>
                 <div class="col-md-6 col-sm-6 col-lg-6">
-                    <h1 class="title">Product name <br> <span style="font-size: 24px;">Rs 5000/- </span><br>
-                        <button class="btn btn-success">Buy Now</button> </h1>
+                    <h1 class="title"><?php echo $row['name']; ?><br> <span
+                                style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
+                        <button class="btn btn-success">Buy Now</button>
+                    </h1>
 
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6">
-                    <img src="img/hair.jpg" alt="">
+                    <img src="img/<?php echo $row['photo']; ?>" alt="">
                 </div>
             </div>
+
+
             <div class="row best-seller">
+                <?php
+                $prod = getProduct("BS-3", $conn);
+                $row = $prod->fetch_assoc();
+                if (isset($_SESSION['login'])) {
+                    ?>
+                    <div class="changeBtnDiv">
+                        <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="BS-3"
+                                data-toggle="modal" data-target="#addProductModal">
+                        </button>
+                    </div>
+                    <?php
+                }
+                ?>
                 <div class="col-md-6 col-sm-6 col-lg-6">
-                    <h1 class="title">Product name <br> <span style="font-size: 24px;">Rs 5000/- </span><br>
-                        <button class="btn btn-success">Buy Now</button> </h1>
+                    <h1 class="title"><?php echo $row['name']; ?><br> <span
+                                style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
+                        <button class="btn btn-success">Buy Now</button>
+                    </h1>
 
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6">
-                    <img src="img/cook.jpg" alt="">
+                    <img src="img/<?php echo $row['photo']; ?>" alt="">
                 </div>
             </div>
 
             <div class="row best-seller">
+                <?php
+                $prod = getProduct("BS-4", $conn);
+                $row = $prod->fetch_assoc();
+                if (isset($_SESSION['login'])) {
+                    ?>
+                    <div class="changeBtnDiv">
+                        <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="BS-4"
+                                data-toggle="modal" data-target="#addProductModal">
+                        </button>
+                    </div>
+                    <?php
+                }
+                ?>
                 <div class="col-md-6 col-sm-6 col-lg-6">
-                    <h1 class="title">Product name <br> <span style="font-size: 24px;">Rs 5000/- </span><br>
-                        <button class="btn btn-success">Buy Now</button> </h1>
+                    <h1 class="title"><?php echo $row['name']; ?><br> <span
+                                style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
+                        <button class="btn btn-success">Buy Now</button>
+                    </h1>
 
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6">
-                    <img src="img/hair.jpg" alt="">
+                    <img src="img/<?php echo $row['photo']; ?>" alt="">
                 </div>
             </div>
+
+
             <div class="row best-seller">
+                <?php
+                $prod = getProduct("BS-5", $conn);
+                $row = $prod->fetch_assoc();
+                if (isset($_SESSION['login'])) {
+                    ?>
+                    <div class="changeBtnDiv">
+                        <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="BS-5"
+                                data-toggle="modal" data-target="#addProductModal">
+                        </button>
+                    </div>
+                    <?php
+                }
+                ?>
                 <div class="col-md-6 col-sm-6 col-lg-6">
-                    <h1 class="title">Product name <br> <span style="font-size: 24px;">Rs 5000/- </span><br>
-                        <button class="btn btn-success">Buy Now</button> </h1>
+                    <h1 class="title"><?php echo $row['name']; ?><br> <span
+                                style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
+                        <button class="btn btn-success">Buy Now</button>
+                    </h1>
 
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6">
-                    <img src="img/hair.jpg" alt="">
+                    <img src="img/<?php echo $row['photo']; ?>" alt="">
                 </div>
             </div>
+
+
+            <div class="row best-seller">
+                <?php
+                $prod = getProduct("BS-6", $conn);
+                $row = $prod->fetch_assoc();
+                if (isset($_SESSION['login'])) {
+                    ?>
+                    <div class="changeBtnDiv">
+                        <button class="btn btn-default glyphicon glyphicon-pencil" data-position-id="BS-6"
+                                data-toggle="modal" data-target="#addProductModal">
+                        </button>
+                    </div>
+                    <?php
+                }
+                ?>
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <h1 class="title"><?php echo $row['name']; ?><br> <span
+                                style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
+                        <button class="btn btn-success">Buy Now</button>
+                    </h1>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6">
+                    <img src="img/<?php echo $row['photo']; ?>" alt="">
+                </div>
+            </div>
+
         </div>
-        </div><!-- #content -->
 
-        <div id="footer">
-            <?php
-            include '_footer.php';
-            ?>
-        </div><!-- #footer -->
+        <div style="height: 100px;"></div>
+    </div><!-- #content -->
 
-    </div><!-- #wrapper -->
-    <script type="text/javascript">jssor_1_slider_init();</script>
+    <div id="footer">
+        <?php
+        include '_footer.php';
+        ?>
+    </div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+
+<script type="text/javascript">
+
+    jssor_1_slider_init();
+
+    $('#addProductModal').on('show.bs.modal', function (e) {
+        var positionId = $(e.relatedTarget).data('position-id');
+        $(e.currentTarget).find('input[name="positionId"]').val(positionId);
+
+    });
+
+
+</script>
+
+
 </body>
 
 </html>

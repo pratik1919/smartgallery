@@ -8,7 +8,7 @@
 
 session_start();
 
-include '../config/dbConnect.php';
+include '../dbConnect.php';
 
 $username = strip_tags($_POST['username']);
 $p = strip_tags($_POST['password']);

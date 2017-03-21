@@ -222,8 +222,8 @@ body {
 }
 
 .featured img{
-	max-height: 400px;
-	min-width: 100%;
+	height: 400px;
+	width: 100%;
 }
 
 .social-media div{
@@ -267,4 +267,9 @@ body {
 .modal-header, .modal-footer{
 	background-color: darkgreen;
 	color: white;
+}
+
+.featured:hover{
+	border: 1px solid black;
+	cursor: pointer;
 }

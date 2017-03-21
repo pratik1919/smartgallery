@@ -25,7 +25,6 @@ while ($stmt->fetch()){
 
 }
 
-
 if($stmt->num_rows > 0) {
     $stmt->fetch();
     $stored_password = $pass;
@@ -42,7 +41,6 @@ if($stmt->num_rows > 0) {
     header('Location: ../login.php');
     $_SESSION['notLogin'] = "0";
 }
-
 
 $stmt->close();
 

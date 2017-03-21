@@ -191,7 +191,10 @@ session_start();
 </head>
 
 <body>
-
+<form action="buy.php" id="read" method="post">
+    <input type="hidden" id="positionId" name="positionId"/>
+    <input type="hidden" value="news" name="content"/>
+</form>
 <div id="wrapper">
 
     <div id="header">
@@ -265,7 +268,7 @@ session_start();
                   data-autocenter="2"></span>
         </div>
     </div>
-    <div class="col-md-4 col-sm-4 col-lg-4 featured">
+    <div class="col-md-4 col-sm-4 col-lg-4 featured" id="featured-1" onclick="submitForm(this)">
         <?php
         $prod = getProduct("featured-1", $conn);
         $row = $prod->fetch_assoc();
@@ -282,7 +285,7 @@ session_start();
         ?>
         <img src="img/<?php echo $row['photo']; ?>" alt="">
     </div>
-    <div class="col-md-4 col-sm-4 col-lg-4 featured">
+    <div class="col-md-4 col-sm-4 col-lg-4 featured" id="featured-2" onclick="submitForm(this)">
         <?php
         $prod = getProduct("featured-2", $conn);
         $row = $prod->fetch_assoc();
@@ -299,7 +302,7 @@ session_start();
         ?>
         <img src="img/<?php echo $row['photo']; ?>" alt="">
     </div>
-    <div class="col-md-4 col-sm-4 col-lg-4 featured">
+    <div class="col-md-4 col-sm-4 col-lg-4 featured" id="featured-3" onclick="submitForm(this)">
         <?php
         $prod = getProduct("featured-3", $conn);
         $row = $prod->fetch_assoc();
@@ -344,7 +347,7 @@ session_start();
                         <div class="overlay">
                             <h5><?php echo $row['name']; ?><br> <span
                                         style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
-                                <button class="btn btn-success">Buy Now</button>
+                                <button class="btn btn-success" id="LP-1" onclick="submitForm(this)">Buy Now</button>
                             </h5>
                         </div>
 
@@ -373,7 +376,7 @@ session_start();
                         <div class="overlay">
                             <h5><?php echo $row['name']; ?><br> <span
                                         style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
-                                <button class="btn btn-success">Buy Now</button>
+                                <button class="btn btn-success" id="LP-2" onclick="submitForm(this)">Buy Now</button>
                             </h5>
                         </div>
 
@@ -401,7 +404,7 @@ session_start();
                         <div class="overlay">
                             <h5><?php echo $row['name']; ?><br> <span
                                         style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
-                                <button class="btn btn-success">Buy Now</button>
+                                <button class="btn btn-success" id="LP-3" onclick="submitForm(this)">Buy Now</button>
                             </h5>
                         </div>
                     </div>
@@ -429,7 +432,7 @@ session_start();
                 <div class="col-md-6 col-sm-6 col-lg-6">
                     <h1 class="title"><?php echo $row['name']; ?><br> <span
                                 style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
-                        <button class="btn btn-success">Buy Now</button>
+                        <button class="btn btn-success" id="BS-1" onclick="submitForm(this)">Buy Now</button>
                     </h1>
 
                 </div>
@@ -455,7 +458,7 @@ session_start();
                 <div class="col-md-6 col-sm-6 col-lg-6">
                     <h1 class="title"><?php echo $row['name']; ?><br> <span
                                 style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
-                        <button class="btn btn-success">Buy Now</button>
+                        <button class="btn btn-success" id="BS-2" onclick="submitForm(this)">Buy Now</button>
                     </h1>
 
                 </div>
@@ -482,7 +485,7 @@ session_start();
                 <div class="col-md-6 col-sm-6 col-lg-6">
                     <h1 class="title"><?php echo $row['name']; ?><br> <span
                                 style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
-                        <button class="btn btn-success">Buy Now</button>
+                        <button class="btn btn-success" id="BS-3" onclick="submitForm(this)">Buy Now</button>
                     </h1>
 
                 </div>
@@ -508,7 +511,7 @@ session_start();
                 <div class="col-md-6 col-sm-6 col-lg-6">
                     <h1 class="title"><?php echo $row['name']; ?><br> <span
                                 style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
-                        <button class="btn btn-success">Buy Now</button>
+                        <button class="btn btn-success" id="BS-4" onclick="submitForm(this)">Buy Now</button>
                     </h1>
 
                 </div>
@@ -535,7 +538,7 @@ session_start();
                 <div class="col-md-6 col-sm-6 col-lg-6">
                     <h1 class="title"><?php echo $row['name']; ?><br> <span
                                 style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
-                        <button class="btn btn-success">Buy Now</button>
+                        <button class="btn btn-success" id="BS-5" onclick="submitForm(this)">Buy Now</button>
                     </h1>
 
                 </div>
@@ -562,7 +565,7 @@ session_start();
                 <div class="col-md-6 col-sm-6 col-lg-6">
                     <h1 class="title"><?php echo $row['name']; ?><br> <span
                                 style="font-size: 24px;">Rs <?php echo $row['price']; ?>/- </span><br>
-                        <button class="btn btn-success">Buy Now</button>
+                        <button class="btn btn-success" id="BS-6" onclick="submitForm(this)">Buy Now</button>
                     </h1>
 
                 </div>
@@ -594,6 +597,13 @@ session_start();
         $(e.currentTarget).find('input[name="positionId"]').val(positionId);
 
     });
+
+    function submitForm(item){
+        var pos = $(item).attr("id");
+        document.getElementById('positionId').value = pos;
+        var id = '#read';
+        $(id).submit();
+    }
 
 
 </script>
